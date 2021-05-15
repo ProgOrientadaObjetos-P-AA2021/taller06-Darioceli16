@@ -1,14 +1,38 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package paquete2;
 
-/**
- *
- * @author Smart
- */
 public class Medico {
-    
+
+    private String nombre;
+    private String especialidad;
+    double sueldoM;
+
+    public Medico(String nom, String e, double s) {
+        nombre = nom;
+        especialidad = e;
+        sueldoM = s;
+    }
+
+    public void establecerNombre(String n) {
+        nombre = n;
+    }
+
+    public void establecerEspecialidad(String n) {
+        especialidad = n;
+    }
+
+    public void establecerSueldoM(double n) {
+        sueldoM = n;
+    }
+
+    public String obtenerNombre() {
+        return nombre;
+    }
+
+    public String obtenerEspecialidad() {
+        return especialidad;
+    }
+
+    public double obtenerSueldoM() {
+        return sueldoM;
+    }
 }

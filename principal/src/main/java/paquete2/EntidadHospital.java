@@ -73,11 +73,11 @@ public class EntidadHospital {
         return numeroE;
     }
 
-    public Medico[] obtenerListaMedico() {
+    public Medico[] obtenerListaMedicos() {
         return me;
     }
 
-    public Enfermero[] obtenerListaEnfermero() {
+    public Enfermero[] obtenerListaEnfermeros() {
         return en;
     }
 
@@ -103,22 +103,22 @@ public class EntidadHospital {
                 obtenerDireccion(),
                 obtenerCiudadH(), obtenerProvincia(),
                 obtenerNumeroE());
-        for (int i = 0; i < obtenerListaMedico().length; i++) {
+        for (int i = 0; i < obtenerListaMedicos().length; i++) {
             cadena = String.format("%s- %s - sueldo: %.2f - %s\n", cadena,
-                    obtenerListaMedico()[i].obtenerNombre(),
-                    obtenerListaMedico()[i].obtenerSueldoM(),
-                    obtenerListaMedico()[i].obtenerEspecialidad());
+                    obtenerListaMedicos()[i].obtenerNombre(),
+                    obtenerListaMedicos()[i].obtenerSueldoM(),
+                    obtenerListaMedicos()[i].obtenerEspecialidad());
         }
         cadena = String.format("%s\nListado de enfermeros(as)\n", cadena);
-        for (int i = 0; i < obtenerListaEnfermero().length; i++) {
+        for (int i = 0; i < obtenerListaEnfermeros().length; i++) {
             cadena = String.format("%s - %s - sueldo: %.2f - %s\n", cadena,
-                    obtenerListaEnfermero()[i].obtenerNombre(),
-                    obtenerListaEnfermero()[i].obtenerSueldoE(),
-                    obtenerListaEnfermero()[i].obtenerTipo());
+                    obtenerListaEnfermeros()[i].obtenerNombre(),
+                    obtenerListaEnfermeros()[i].obtenerSueldoE(),
+                    obtenerListaEnfermeros()[i].obtenerTipo());
         }
         cadena = String.format("%s \nTotal de sueldos a pagar por mes: %.2f",
-                cadena, obtenerTotalSueldo(obtenerListaMedico(),
-                        obtenerListaEnfermero()));
+                cadena, obtenerTotalSueldo(obtenerListaMedicos(),
+                        obtenerListaEnfermeros()));
         return cadena;
     }
 }

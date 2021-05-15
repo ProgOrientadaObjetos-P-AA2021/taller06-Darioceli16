@@ -1,14 +1,31 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package paquete2;
 
-/**
- *
- * @author Smart
- */
 public class Hospital {
-    
+
+    private String nombreCiudad;
+    private String provinciaCiudad;
+
+    public Hospital(String nom, String n) {
+        nombreCiudad = nom;
+        provinciaCiudad = n;
+    }
+
+    public void establecerNombre(String nom) {
+        nombreCiudad = nom;
+    }
+
+    public void establecerProvincia(String n) {
+        provinciaCiudad = n;
+    }
+
+
+    public String obtenerNombre() {
+        return nombreCiudad;
+    }
+
+    public String obtenerProvincia() {
+        return provinciaCiudad;
+    }
+
+
 }
